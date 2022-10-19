@@ -1,0 +1,5 @@
+warp:
+  addedWarp: "&7Added warp &f&l%warp%&7!"
+  removedWarp: "&7Removed warp &f&l%warp%&7!"
+  noWarp: "&cThere is no warp named &l%warp%&c."
+  alreadyExists: "&cThis warp already exists!"

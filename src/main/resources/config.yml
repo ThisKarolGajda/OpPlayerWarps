@@ -1,0 +1,50 @@
+mysql:
+  enabled: false
+  jdbc: "jdbc:mysql://localhost:3306/test"
+  user: "root"
+  password: ""
+
+teleport:
+  settings:
+    permission:
+      default: 15
+    onStart:
+      text:
+        text: You are going to be teleported soon! Don't move!
+    onEach:
+      sound:
+        volume: 1.0
+        pitch: 1.0
+        sound: BLOCK_COMPARATOR_CLICK
+      title:
+        title: Teleporting in %time%!
+        subtitle: Don't move!
+        fadeIn: 5
+        stay: 13
+        fadeOut: 2
+    onEnd:
+      sound:
+        volume: 0.3
+        pitch: 1.0
+        sound: BLOCK_ANVIL_LAND
+      title:
+        title: Teleported!
+        subtitle: '%location%'
+        fadeIn: 10
+        stay: 100
+        fadeOut: 10
+      text:
+        text: You were teleported to %location%!
+    onInvalid:
+      sound:
+        volume: 1.5
+        pitch: 1.0
+        sound: ENTITY_GOAT_HORN_BREAK
+      title:
+        title: Not safe!
+        subtitle: You cannot teleport there!
+        fadeIn: 10
+        stay: 80
+        fadeOut: 10
+      text:
+        text: Place where you wanted to teleport is unsafe! Really!
