@@ -22,6 +22,7 @@ public class MySql3 extends OpMDatabaseAuto<OpPlayerWarp> {
                 new OpMObjects<OpPlayerWarp>().addNotNullText("uuid", OpPlayerWarp::getOwnerUUID).addNotNullText("location", OpPlayerWarp::getStringLocation).addNotNullText("rating", OpPlayerWarp::getStringRating).addNotNullText("warpName", OpPlayerWarp::getWarpName).addNotNullText("name", OpPlayerWarp::getOwnerName).addPrimaryNotNullInt("id", OpPlayerWarp::getId)));
     }
 
+
     @Override
     public Function<OpMResultSet, OpPlayerWarp> getObjectAsResultSet() {
         return set -> new OpPlayerWarp(set.getUUID("uuid"), set.getText("name"), set.getLocation("location"), new OpPlayerWarpRating().fromString(set.getText("rating")), set.getText("warpName"), set.getInt("id"));
