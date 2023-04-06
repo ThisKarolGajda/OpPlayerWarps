@@ -2,4 +2,5 @@ name: OpPlayerWarps
 version: '${project.version}'
 main: me.opkarol.opplayerwarps.OpPlayerWarps
 api-version: 1.19
-depend: [opc]
+depend:
+  - opc
